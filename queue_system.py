@@ -1,4 +1,4 @@
-from multiprocessing import Process, Semaphore, Pipe
+from multiprocessing import Process, Semaphore
 import time
 import argparse
 import os
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     while True:
         statuses = [p.is_alive() for p in processes]
         pids = [str(p.pid) for p in processes]
-        exit_codes = [str(p.exitcode) for p in processes]
+        exit_codes = [str(p.exitcode) if p.exitcode != None else '-' for p in processes]
         
         print()
         print('PID\t\t' + '\t'.join(pids))
