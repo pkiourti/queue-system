@@ -1,7 +1,6 @@
 from multiprocessing import Process, Semaphore
 import time
 import argparse
-import os
 
 free_resources = Semaphore(4)
 
