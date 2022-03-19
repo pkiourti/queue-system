@@ -4,12 +4,12 @@ import argparse
 
 free_resources = Semaphore(4)
 
-def handle_api_request(seconds):
-    time.sleep(seconds)
+def handle_api_request():
+    time.sleep(3)
 
-def server_task(seconds):
+def server_task(request_id):
     free_resources.acquire()
-    handle_api_request(seconds)
+    handle_api_request()
     free_resources.release()
 
 def get_parser():
