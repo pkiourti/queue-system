@@ -13,5 +13,5 @@ Each API call is going to be handled inside a separate process (even though I on
 When we run the system with 4 API requests:
 ![8-requests-screenshot](https://github.com/pkiourti/queue-system/blob/main/screenshots/8-requests.png)
 
-When we run the system with 9 API requests but we sent a kill signal to the process that handles the last request:
+When we run the system with 10 API requests but we sent a kill signal to the process that handles the last request:
 ![8-requests-screenshot](https://github.com/pkiourti/queue-system/blob/main/screenshots/screenshot-kill-a-process.png)
